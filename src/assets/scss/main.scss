@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import './variables';
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+#app {
+  background-color: #DFDFDF;
+  font-size: 16px;
+  max-width: 420px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 15px;
+  width: 100%;
+}
+
+.color-primary {
+  color: #797979;
+}
+
+.color-secondary {
+  color: #2B89A6;
+}
+
+.app-container {
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+.product-list {
+  font-size: 18px;
+  padding: 10px 0px;
+
+  &__radio-wrapper {
+    padding: 15px 10px 15px 40px;
+
+    &:hover {
+      background-color: #EAF4F7;
+      outline: 2px solid #D6E8ED;
+    }
+  }
+
+  &__radio {
+    position: relative;
+    display: block;
+    font-weight: bold;
+
+    input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    input:checked~label:after {
+      background-color: #0093ba;
+    }
+
+    label {
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -30px;
+        border: 3px solid #296087;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -23px;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+      }
+
+      .label__price {
+        float: right;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.product-quantity {
+  border-top: 2px solid #DFDFDF;
+  border-bottom: 2px solid #DFDFDF;
+  font-weight: bold;
+  padding: 20px 0px;
+  text-align: center;
+
+  select {
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid #96B9E9;
+    border-radius: .25rem;
+    color: #495057;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: 15px;
+    min-width: 50px;
+    padding: 2px 5px;
+  }
+}
+
+.product-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+
+  .price {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px;
+
+    sup {
+      position: relative;
+      top: 4px;
+    }
+  }
+
+  .button {
+    background-color: #2AA74A;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 50px;
+  }
+
+  .plan {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 30px;
+  }
+}
